@@ -34,8 +34,10 @@ export class Contador {
   actualizarCuenta() {
     // this.cuentaElement.innerText = this.numero;
 		const gruposActuales = this.cuentaElement.querySelectorAll(".grupo");
+    const separadoresActuales = this.cuentaElement.querySelectorAll(".separador");
 		if(gruposActuales.length > 0) {
 			Array.from(gruposActuales).forEach(grupo => this.cuentaElement.removeChild(grupo));
+      Array.from(separadoresActuales).forEach(separador => this.cuentaElement.removeChild(separador));
 		}
 		for (let i = 0; i < this.numero; i++) {
 			let grupoActual;
@@ -43,6 +45,11 @@ export class Contador {
 				const nuevoGrupo = document.createElement("div");
 				nuevoGrupo.classList.add("grupo");
 				this.grupoActual = nuevoGrupo;
+        if(i%15 === 0 && i!==0) {
+          const separador = document.createElement("div");
+          separador.classList.add("separador")
+          this.cuentaElement.appendChild(separador);
+        };
 				this.cuentaElement.appendChild(nuevoGrupo);
 			}
 			const nuevoFosforo = document.createElement("img");

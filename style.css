@@ -99,3 +99,18 @@ button{
 dialog{
 	font-size: larger;
 }
+
+.separador{
+	border-top: 2px solid black;
+	width: var(--dimensiones-grupo);
+	margin: 10px;
+}
+
+@media (min-width: 450px) { 
+	.separador{
+		height: var(--dimensiones-grupo);
+		width: unset;
+		border-top: unset;
+		border-left: 2px solid black;
+	}
+ }
