@@ -4,8 +4,13 @@
 	--dimensiones-grupo:70px;
 }
 
-h1{
+*{
 	text-align: center;
+	font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body{
+	background-color: beige;	
 }
 
 #jugadoresContainer {
@@ -19,8 +24,9 @@ h1{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	background-color: aqua;
-	border-radius: 20px;
+	justify-content: flex-start;
+	background-color: rgb(234, 233, 213);
+	border-radius: 5px;
 	margin: 10px;
 }
 
@@ -74,4 +80,18 @@ img{
 	transform: rotate(45deg);
 	left:34px;
 	top:0px
+}
+
+.botonesJugador{
+	display: flex;
+	gap: 20px;
+	margin-top: auto;
+}
+
+button{
+	min-width: 60px;
+	padding: 0 10px;
+	font-size: xx-large;
+	margin: 20px 0;
+	background-color: unset;
 }

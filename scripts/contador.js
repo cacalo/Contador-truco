@@ -11,6 +11,7 @@ export class Contador {
     this.cuentaElement = this.containerElement.querySelector(".cuenta");
     this.containerElement.querySelector(".agregar").addEventListener("click", () => this.agregar());
     this.containerElement.querySelector(".restar").addEventListener("click", () => this.restar());
+    this.containerElement.querySelector("h2").innerText = this.nombre;
   }
 
   agregar(cantidad = 1) {
