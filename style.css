@@ -21,6 +21,7 @@ body{
 
 .jugadorContainer {
 	width: 40vw;
+	min-height: 70vh;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -28,6 +29,11 @@ body{
 	background-color: rgb(234, 233, 213);
 	border-radius: 5px;
 	margin: 10px;
+}
+
+h2{
+	margin-top: 30px;
+	margin-bottom: 0px;
 }
 
 img{
@@ -83,9 +89,9 @@ img{
 }
 
 .botonesJugador{
-	display: flex;
-	gap: 20px;
+	position:fixed;
 	margin-top: auto;
+	top:50px;
 }
 
 button{
@@ -93,7 +99,8 @@ button{
 	padding: 0 10px;
 	font-size: xx-large;
 	margin: 20px 0;
-	background-color: unset;
+	border-radius: 5px;
+	background-color: rgb(200, 197, 193);
 }
 
 dialog{
