@@ -56,15 +56,14 @@ img{
 .fosforo1{
 	position: absolute;
 	transform: rotate(90deg);
-	left: var(--left-horizontal);
 	top:-30px;
 	left:var(--left-horizontal);
 }
 
 .fosforo2{
 	position: absolute;
-	left:  65px;
 	transform: rotate(180deg);
+	left:  65px;
 	top: var(--top-vertical)
 }
 

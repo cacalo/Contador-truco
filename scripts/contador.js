@@ -36,15 +36,15 @@ export class Contador {
 		const gruposActuales = this.cuentaElement.querySelectorAll(".grupo");
     const separadoresActuales = this.cuentaElement.querySelectorAll(".separador");
 		if(gruposActuales.length > 0) {
-			Array.from(gruposActuales).forEach(grupo => this.cuentaElement.removeChild(grupo));
-      Array.from(separadoresActuales).forEach(separador => this.cuentaElement.removeChild(separador));
+			gruposActuales.forEach(grupo => this.cuentaElement.removeChild(grupo));
+      separadoresActuales.forEach(separador => this.cuentaElement.removeChild(separador));
 		}
+    let grupoActual;
 		for (let i = 0; i < this.numero; i++) {
-			let grupoActual;
 			if(i%5 === 0){
 				const nuevoGrupo = document.createElement("div");
 				nuevoGrupo.classList.add("grupo");
-				this.grupoActual = nuevoGrupo;
+				grupoActual = nuevoGrupo;
         if(i%15 === 0 && i!==0) {
           const separador = document.createElement("div");
           separador.classList.add("separador")
@@ -55,7 +55,7 @@ export class Contador {
 			const nuevoFosforo = document.createElement("img");
 			nuevoFosforo.classList.add("fosforo", "fosforo"+(i%5+1))
 			nuevoFosforo.src = "img/fosforo.png";
-			this.grupoActual.appendChild(nuevoFosforo)
+			grupoActual.appendChild(nuevoFosforo)
 		}
   }
 }
