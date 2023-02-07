@@ -1,5 +1,3 @@
-import { Contador } from "./contador.js";
-
 //Variables y selectores
 const partidaEnMemoria = JSON.parse(localStorage.getItem("truco"));
 const p1Nombre= "Nosotros";

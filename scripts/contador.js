@@ -1,4 +1,4 @@
-export class Contador {
+class Contador {
   numero = 0;
   nombre;
   containerElement;
